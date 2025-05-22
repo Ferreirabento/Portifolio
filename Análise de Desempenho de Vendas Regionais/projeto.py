@@ -41,4 +41,13 @@ trimestre_mais_lucrativo = np.argmax(soma)
 print(trimestre_mais_lucrativo)
 print("-=" * 20)
 
+plt.figure(figsize=(8, 6))
+plt.imshow(array, cmap="YlGn", aspect="auto")
+plt.colorbar(label="Vendas")
+plt.xticks(ticks=np.arange(len(matriz.columns)), labels=matriz.columns)
+plt.yticks(ticks=np.arange(len(matriz.index)), labels=matriz.index)
+plt.title("Mapa de Calor das Vendas por Região e Trimestre")
+plt.xlabel("Trimestres")
+plt.ylabel("Regiões")
+plt.show()
 
